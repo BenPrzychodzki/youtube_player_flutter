@@ -1,7 +1,3 @@
-## 9.1.0
-* Updates minimum supported SDK version to Flutter 3.24/Dart 3.5.
-* Updates dependencies.
-
 ## 9.0.4
 * Fixes related to fullscreen toggle.
 
