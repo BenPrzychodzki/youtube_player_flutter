@@ -50,6 +50,8 @@ class ProgressBar extends StatefulWidget {
     super.key,
     this.controller,
     this.colors,
+    this.progressWidth = 2.0,
+    this.handleRadius = 7.0,
     this.isExpanded = false,
   });
 
@@ -63,6 +65,10 @@ class ProgressBar extends StatefulWidget {
   ///
   /// Default is false.
   final bool isExpanded;
+
+  final double progressWidth;
+
+  final double handleRadius;
 
   @override
   State<ProgressBar> createState() => _ProgressBarState();
@@ -172,8 +178,8 @@ class _ProgressBarState extends State<ProgressBar> {
         constraints: const BoxConstraints.expand(height: 7.0 * 2),
         child: CustomPaint(
           painter: _ProgressBarPainter(
-            progressWidth: 2.0,
-            handleRadius: 7.0,
+            progressWidth: widget.progressWidth,
+            handleRadius: widget.handleRadius,
             playedValue: _playedValue,
             bufferedValue: _bufferedValue,
             colors: widget.colors,
